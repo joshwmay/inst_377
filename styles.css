@@ -1,0 +1,21 @@
+h1 {
+  background: black;
+  color: white;
+  text-transform: capitalize;
+  text-align: center;
+  padding: 60px;
+}
+#appro_id{
+    padding: 60px;
+    text-align: center;
+}
+img {
+    border-radius: 8px;
+    width: -50%;
+    height: -50%;
+    filter: grayscale(100%);
+}
+#work_history{
+    column-count: 3;
+    padding-top: 20px;
+}
