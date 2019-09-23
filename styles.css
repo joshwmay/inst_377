@@ -1,21 +1,142 @@
-h1 {
-  background: black;
-  color: white;
-  text-transform: capitalize;
-  text-align: center;
-  padding: 60px;
 }
+#may {
+  background: #561A0E;
+  color: #DEC6D7;
+  text-justify: center;
+  text-align: center;
+  flex-flow: column;
+  column-count: 1;
+  justify-content: center;
+  flex-direction: center;
+  align-items: start;
+  align-self: center;
+  height: 370px;
+}
+
+#first, #class, #assignment {
+    text-decoration: overline underline;
+    font-size: 55px;
+    font-family: arial;
+}
+
 #appro_id{
     padding: 60px;
     text-align: center;
+    background: #B545E5;
 }
-img {
-    border-radius: 8px;
-    width: -50%;
-    height: -50%;
-    filter: grayscale(100%);
+
+#quote{
+    display: flex;
+    flex-direction: center;
+    justify-content: space-around;
+    font-size: 40px;
+    padding: 35px;
+    background-color: #B525E5;
+    overflow: hidden;
 }
-#work_history{
-    column-count: 3;
-    padding-top: 20px;
+
+#appro_id img{
+    width: 450px;
+    height: 300px;
+    background-color: #B525E5;
+    opacity: 0.9;
+    filter: grayscale(40%);
+    position: relative;
+    animation: push ease-in-out 20s alternate infinite;
+    animation delay: 20.5s
+}
+.image {
+    position: relative;
+}
+
+@keyframes push {
+    0% {
+        left: 0;
+    top: 0;
+  }
+
+  50% {
+    left: -100px;
+    top: 100px;
+  }
+  100% {
+    top: 50px;
+    left: 50px;
+  }
+}
+
+@-webkit-keyframes push {
+    0% {
+        left: 0;
+    top: 0;
+  }
+
+  50% {
+    left: -100px;
+    top: 100px;
+  }
+  100% {
+    top: 50px;
+    left: 50px;
+  }
+}
+
+#pizza {
+    animation-timing-function: linear;
+    animation-timing-function: ease;
+    animation-timing-function: ease-in;
+    animation-timing-function: ease-out;
+    animation-timing-function: ease-in-out;
+}
+#pizza {
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-timing-function: ease;
+    -webkit-animation-timing-function: ease-in;
+    -webkit-animation-timing-function: ease-out;
+    -webkit-animation-timing-function: ease-in-out;
+}
+#left, #center, #right{
+    align-items: start;
+    background: #63499F;
+    border-color: #DEC6D7;
+    border-style: dotted;
+    flex-direction: baseline;
+    font-size: 40px;
+    height: 500px;
+    justify-content: center;
+    margin: .25px;
+    overflow: hidden;
+    width: 500px;
+}
+
+#span {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    padding: none;
+    overflow: hidden;
+}
+
+.left {
+    display: flex;
+    align-self: flex-start;
+}
+
+.center {
+    display: flex;
+    align-self: center;
+}
+
+.right {
+    display: flex;
+    align-self: flex-end;
+}
+
+.first {
+    align-self: center;
+    justify-content: center;
+}
+.class {
+    align-self: center;
+    justify-content: center;
 }
