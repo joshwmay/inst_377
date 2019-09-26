@@ -1,19 +1,19 @@
+/* Div positioning help found at https://css-tricks.com/almanac/properties/p/position/
+ */
 #first {
   padding-top: 5%;
   background: #561A0E;
   color: #DEC6D7;
-  text-justify: center;
   text-align: center;
   flex-flow: column;
   column-count: 1;
   justify-content: center;
-  flex-direction: center;
   align-items: center;
   align-self: center;
   height: 200px;
 }
 body {
-    background-image: url("https://image.freepik.com/free-photo/milky-way-starry-sky-background_34011-265.jpg");
+    background-image: url("https://www.bittbox.com/wp-content/uploads/2014/12/17-35-Stunning-Hi-Res-22Public-Domain22-Astronomy-Images.jpg");
     background-repeat: repeat;
     background-size: cover;
 }
@@ -40,11 +40,10 @@ body {
 
 #slice {
     filter: grayscale(40%);
-    position: fixed;
     position: relative;
-    animation: pull 15s alternate infinite;
-    animation: push 10s alternate infinite;
-    animation delay: 30s
+    animation: move2 15s alternate infinite;
+    animation: move1 10s alternate infinite;
+    animation-delay: 3s;
 }
 
 #quote{
@@ -61,100 +60,80 @@ body {
     opacity: 0.9;
 }
 
-@keyframes center {
-    display: flex;
-    position: absolute;
-    center: 100px;
-}
-@-webkit-keyframes center {
-    display: flex;
-    position: absolute;
-    center: 100px;
-}
-@keyframes push {
+@keyframes move1 {
     0% {
-        left: 0;
         top: 0;
-  }
-
-  50% {
-    left: 500px;
-    top: 25px;
-  }
-  100% {
-    top: 75px;
-    left: 100px;
-    bottom: 400px;
-  }
-}
-
-@-webkit-keyframes push {
-    0% {
-        left: 300px;
-        top: 0;
-  }
-
-  50% {
-    left: 0;
-    top: 0;
-  }
-  100% {
-    top: 50px;
-    left: 100px;
-  }
-}
-@webkit pull {
-    0% {
         right: 0;
-        bottom: 0;
   }
-
-  50% {
-    border-right: -100px;
-    bottom: 100px;
+   50% {
+        bottom: -100px;
+        right: 100px;
   }
   100% {
-    bottom: 60px;
-    left: 50px;
+        top: 500px;
+        right: 500px;
   }
 }
 
-@-webkit-keyframes pull {
+@-webkit-keyframes move1 {
     0% {
-        right: 0;
-        bottom: 0;
+        top: 500px;
+        right: 500px;
   }
-
-  50% {
-    border-right: -100px;
-    bottom: 100px;
+   50% {
+        bottom: -100px;
+        right: 100px;
   }
   100% {
-    bottom: 60px;
-    left: 50px;
+        bottom: 500px;
+        right: 500px;
   }
 }
 
-#pizza, #quote {
+@keyframes move2 {
+    0% {
+        top: 500px;
+        right: 500px;
+  }
+   50% {
+        bottom: -100px;
+        right: 100px;
+  }
+  100% {
+        bottom: 500px;
+        right: 500px;
+  }
+}
+
+@-webkit-keyframes move2 {
+    0% {
+        top: 500px;
+        right: 500px;
+  }
+   50% {
+        bottom: -100px;
+        right: 100px;
+  }
+  100% {
+        top: 500px;
+        right: 500px;
+  }
+}
+
+#pizza {
     animation-timing-function: linear;
     animation-timing-function: ease;
     animation-timing-function: ease-in;
     animation-timing-function: ease-out;
     animation-timing-function: ease-in-out;
-    animation-timing-function: center;
-}
-
-#pizza, #quote {
     -webkit-animation-timing-function: linear;
     -webkit-animation-timing-function: ease;
     -webkit-animation-timing-function: ease-in;
     -webkit-animation-timing-function: ease-out;
     -webkit-animation-timing-function: ease-in-out;
-    -webkit-animation-timing-function: center;
 }
 
 #left, #center, #right{
-    text-justify: center;
     text-align: center;
     background: #63499F;
     border-color: #DEC6D7;
@@ -162,22 +141,18 @@ body {
     font-size: 40px;
     height: 600px;
     width: 500px;
-    padding: auto;
 }
 
 #resume {
-    flex-direction: column;
-    flex-flow: column;
-    align-items: center;
+    display: flex;
+    justify-content: space-around;
     column-count: 3;
     color: #C3D23D;
-    justify-content: space-around;
 }
 
 #left, #center, #right p{
     color: #C3D23D;
 }
-
 
 #left a{
     text-decoration: none;
@@ -196,8 +171,7 @@ body {
 
 footer {
     font-size: 220%;
-    font: arial;
-    text-decoration: border;
+    font-family: arial;
     border-style: outset;
     display: flex;
     flex-flow: wrap;
@@ -206,6 +180,6 @@ footer {
 
 #assignment p{
     display: flex;
-    flex-direction: center;
+    align-self: center;
     color: #DEC6D7;
 }
