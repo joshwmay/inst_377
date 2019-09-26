@@ -1,4 +1,5 @@
-#may {
+#first {
+  padding-top: 5%;
   background: #561A0E;
   color: #DEC6D7;
   text-justify: center;
@@ -7,135 +8,204 @@
   column-count: 1;
   justify-content: center;
   flex-direction: center;
-  align-items: start;
+  align-items: center;
   align-self: center;
-  height: 370px;
+  height: 200px;
 }
-
-#first, #class, #assignment {
-    text-decoration: overline underline;
-    font-size: 55px;
+body {
+    background-image: url("https://image.freepik.com/free-photo/milky-way-starry-sky-background_34011-265.jpg");
+    background-repeat: repeat;
+    background-size: cover;
+}
+#first {
+    font-size: 75px;
     font-family: arial;
+    align-self: center;
+    justify-content: center;
+}
+#appro_id {
+    height: 750px;
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    padding: 25px;
 }
 
-#appro_id{
-    padding: 60px;
-    text-align: center;
-    background: #B545E5;
+#first a{
+    text-decoration: none;
+    color: #FBFBEB;
+    -webkit-text-stroke-width: 3px;
+    -webkit-text-stroke-color: #B525E5 ;
+}
+
+#slice {
+    filter: grayscale(40%);
+    position: fixed;
+    position: relative;
+    animation: pull 15s alternate infinite;
+    animation: push 10s alternate infinite;
+    animation delay: 30s
 }
 
 #quote{
     display: flex;
-    flex-direction: center;
-    justify-content: space-around;
+    position: absolute;
+    justify-content: center;
+    align-self: flex-end;
+    align-content: center;
     font-size: 40px;
-    padding: 35px;
-    background-color: #B525E5;
+    padding: 10px;
+    width: 1800px;
     overflow: hidden;
-}
-
-#appro_id img{
-    width: 450px;
-    height: 300px;
     background-color: #B525E5;
     opacity: 0.9;
-    filter: grayscale(40%);
-    position: relative;
-    animation: push ease-in-out 20s alternate infinite;
-    animation delay: 20.5s
-}
-.image {
-    position: relative;
 }
 
+@keyframes center {
+    display: flex;
+    position: absolute;
+    center: 100px;
+}
+@-webkit-keyframes center {
+    display: flex;
+    position: absolute;
+    center: 100px;
+}
 @keyframes push {
     0% {
         left: 0;
-    top: 0;
+        top: 0;
   }
 
   50% {
-    left: -100px;
-    top: 100px;
+    left: 500px;
+    top: 25px;
   }
   100% {
-    top: 50px;
-    left: 50px;
+    top: 75px;
+    left: 100px;
+    bottom: 400px;
   }
 }
 
 @-webkit-keyframes push {
     0% {
-        left: 0;
-    top: 0;
+        left: 300px;
+        top: 0;
   }
 
   50% {
-    left: -100px;
-    top: 100px;
+    left: 0;
+    top: 0;
   }
   100% {
     top: 50px;
+    left: 100px;
+  }
+}
+@webkit pull {
+    0% {
+        right: 0;
+        bottom: 0;
+  }
+
+  50% {
+    border-right: -100px;
+    bottom: 100px;
+  }
+  100% {
+    bottom: 60px;
     left: 50px;
   }
 }
 
-#pizza {
+@-webkit-keyframes pull {
+    0% {
+        right: 0;
+        bottom: 0;
+  }
+
+  50% {
+    border-right: -100px;
+    bottom: 100px;
+  }
+  100% {
+    bottom: 60px;
+    left: 50px;
+  }
+}
+
+#pizza, #quote {
     animation-timing-function: linear;
     animation-timing-function: ease;
     animation-timing-function: ease-in;
     animation-timing-function: ease-out;
     animation-timing-function: ease-in-out;
+    animation-timing-function: center;
 }
-#pizza {
+
+#pizza, #quote {
     -webkit-animation-timing-function: linear;
     -webkit-animation-timing-function: ease;
     -webkit-animation-timing-function: ease-in;
     -webkit-animation-timing-function: ease-out;
     -webkit-animation-timing-function: ease-in-out;
+    -webkit-animation-timing-function: center;
 }
+
 #left, #center, #right{
-    align-items: start;
+    text-justify: center;
+    text-align: center;
     background: #63499F;
     border-color: #DEC6D7;
     border-style: dotted;
-    flex-direction: baseline;
     font-size: 40px;
-    height: 500px;
-    justify-content: center;
-    margin: .25px;
-    overflow: hidden;
+    height: 600px;
     width: 500px;
+    padding: auto;
 }
 
-#span {
-    display: flex;
+#resume {
+    flex-direction: column;
+    flex-flow: column;
+    align-items: center;
+    column-count: 3;
+    color: #C3D23D;
     justify-content: space-around;
-    text-align: center;
-    padding: none;
-    overflow: hidden;
 }
 
-.left {
+#left, #center, #right p{
+    color: #C3D23D;
+}
+
+
+#left a{
+    text-decoration: none;
+    color: #C3D23D;
+}
+
+#center a{
+    text-decoration: none;
+    color: #C3D23D;
+}
+
+#right a{
+    text-decoration: none;
+    color: #C3D23D;
+}
+
+footer {
+    font-size: 220%;
+    font: arial;
+    text-decoration: border;
+    border-style: outset;
     display: flex;
-    align-self: flex-start;
+    flex-flow: wrap;
+    justify-content: space-around;
 }
 
-.center {
+#assignment p{
     display: flex;
-    align-self: center;
-}
-
-.right {
-    display: flex;
-    align-self: flex-end;
-}
-
-.first {
-    align-self: center;
-    justify-content: center;
-}
-.class {
-    align-self: center;
-    justify-content: center;
+    flex-direction: center;
+    color: #DEC6D7;
 }
